@@ -27,7 +27,7 @@
 #define DefaultAcceptorColor        Red
 #define DefaultApplyDistance        20
 #define DefaultCaptionColor         Gold
-#define DefaultValueColor           Black
+#define DefaultValueColor           clrBlack
 #define DefaultPriceArrowCode       SYMBOL_RIGHTPRICE
 #define DefaultPriceArrowSize       3
 #define DefaultPriceArrowColor      Black

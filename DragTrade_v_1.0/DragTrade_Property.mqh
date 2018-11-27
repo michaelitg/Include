@@ -24,7 +24,7 @@
 //+------------------------------------------------------------------+
 //|                                           DragTrade_Property.mqh |
 //+------------------------------------------------------------------+
-#property copyright "Copyright © 2009, TheXpert"
+#property copyright "Copyright ?2009, TheXpert"
 #property link      "theforexpert@gmail.com"
 
 #define PROP_ID " Property "

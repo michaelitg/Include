@@ -12,25 +12,6 @@
 // Strings
 //
 
-// Converts double value to string w/o unnecessary zeros
-string DoubleToString(double value)
-{
-   string result = DoubleToStr(value, 8);
-   int length = StringLen(result);
-
-   for(; length > 0; length--)
-   {
-      if(StringGetChar(result, length - 1) != '0') break;
-   }
-
-   if(StringGetChar(result, length - 1) == '.')
-   {
-      length--;
-   }
-
-   return(StringSubstr(result, 0, length));
-}
-
 string Join(string separator, string values[])
 {
    string result;
@@ -125,6 +106,19 @@ bool TimeEquals(datetime a, datetime b)
 //
 // Logging
 //
+datetime dtime[10];
+void initLog()
+{
+   for(int i=0; i < 10; i++) dtime[i] = 0;
+}
+
+void log(int index, string message)
+{
+   if( TimeCurrent() - dtime[index] > 60){
+       Print( message, " @",TimeToStr(TimeCurrent(), TIME_DATE | TIME_MINUTES));
+       dtime[index] = TimeCurrent();
+   }
+}
 
 bool _DebugViewEnabled = false;
 

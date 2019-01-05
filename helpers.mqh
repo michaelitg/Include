@@ -114,7 +114,7 @@ void initLog()
 
 void log(int index, string message)
 {
-   if( TimeCurrent() - dtime[index] > 60){
+   if( TimeCurrent() - dtime[index] > 50){
        Print( message, " @",TimeToStr(TimeCurrent(), TIME_DATE | TIME_MINUTES));
        dtime[index] = TimeCurrent();
    }
